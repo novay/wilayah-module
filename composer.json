@@ -1,0 +1,31 @@
+{
+    "name": "novay/wilayah-module",
+    "type": "laravel-module",
+    "description": "Package Laravel yang berisi data Provinsi, Kabupaten/Kota, Kecamatan dan Kelurahan/Desa di seluruh Indonesia.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noviyanto Rahmadi",
+            "email": "me@novay.web.id"
+        },
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Wilayah\\Providers\\WilayahServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Wilayah\\": ""
+        }
+    }
+}
