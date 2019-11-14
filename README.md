@@ -7,7 +7,7 @@ Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersum
 Requirements
 - Laravel
 - https://github.com/nwidart/laravel-modules
-
+- https://github.com/joshbrw/laravel-module-installer
 
 Instalation
 
@@ -17,7 +17,16 @@ Install Package Via Composer
 
 Usage
 
+- php artisan module:migrate Wilayah
+- php artisan module:seed Wilayah
 
+
+Helpers (Eloquent)
+
+- provinsi()->get()
+- kota()->find($id)
+- kecamatan()->whereNama('Sungai Kunjang')->first()
+- kelurahan()->paginate(10)
 
 
 Enable Logo Provinsi dan Kabupaten/Kota
