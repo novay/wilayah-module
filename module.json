@@ -8,6 +8,8 @@
         "Modules\\Wilayah\\Providers\\WilayahServiceProvider"
     ],
     "aliases": {},
-    "files": [],
+    "files": [
+        "Helpers/helpers.php"
+    ],
     "requires": []
 }
