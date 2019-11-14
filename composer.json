@@ -19,7 +19,10 @@
                 "Modules\\Wilayah\\Providers\\WilayahServiceProvider"
             ],
             "aliases": {
-
+                "Provinsi" : "Modules\\Wilayah\\Entities\\Provinsi.php", 
+                "Kota" : "Modules\\Wilayah\\Entities\\Kota.php", 
+                "Kecamatan" : "Modules\\Wilayah\\Entities\\Kecamatan.php", 
+                "Kelurahan" : "Modules\\Wilayah\\Entities\\Kelurahan.php"
             }
         }
     },
