@@ -21,12 +21,13 @@ Usage
 - `php artisan module:seed Wilayah`
 
 
-Helpers (Eloquent)
+Helpers
 
 - `provinsi()->get()`
 - `kota()->find($id)`
 - `kecamatan()->whereNama('Sungai Kunjang')->first()`
 - `kelurahan()->paginate(10)`
+- `logo($id) ` Untuk full url logo. *$id* adalah id provinsi atau kota..
 
 
 Enable Logo Provinsi dan Kabupaten/Kota
