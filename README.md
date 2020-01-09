@@ -1,4 +1,4 @@
-Data Wilayah Indonesia
+###Data Wilayah Indonesia
 
 Modul Laravel ini berisi data Provinsi, Kabupaten/Kota, Kecamatan dan Kelurahan/Desa di seluruh Indonesia. 
 Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersumber dari edwardsamuel/Wilayah-Administratif-Indonesia.
@@ -20,6 +20,20 @@ Usage
 - `php artisan module:migrate Wilayah`
 - `php artisan module:seed Wilayah`
 
+Linked Helpers
+`
+"autoload": {
+	"psr-4": {
+            ...
+        },
+        "classmap": [
+            ...
+        ], 
+        "files": [
+            "Modules/Wilayah/Helpers/helpers.php"
+	]
+},
+`
 
 Helpers
 
