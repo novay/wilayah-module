@@ -60,7 +60,7 @@ composer require novay/wilayah-module
 - `kota()->find($id)`
 - `kecamatan()->whereNama('Sungai Kunjang')->first()`
 - `kelurahan()->paginate(10)`
-- `logo($id) ` Untuk full url logo. `$id` adalah id provinsi atau kota..
+- `logo($id) ` Untuk full url logo. `$id` adalah id provinsi atau kota.
 
 
 ### Enable Logo
@@ -84,4 +84,4 @@ php artisan wilayah:logo
 ## License
 Wilayah Modules is licensed under the MIT license for both personal and commercial products. Enjoy!
 
-## Tested on Laravel 6+.
+**Tested on Laravel 6+**
