@@ -6,8 +6,8 @@
 [![Latest Unstable Version](https://poser.pugx.org/novay/wilayah-module/v/unstable.svg)](https://packagist.org/packages/novay/wilayah-module)
 [![License](https://poser.pugx.org/novay/wilayah-module/license.svg)](https://raw.githubusercontent.com/novay/wilayah-module/LICENSE)
 
-Modul Laravel ini berisi data Provinsi, Kabupaten/Kota, Kecamatan dan Kelurahan/Desa di seluruh Indonesia. 
-Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersumber dari edwardsamuel/Wilayah-Administratif-Indonesia.
+**Modul Laravel** ini berisi data Provinsi, Kabupaten/Kota, Kecamatan dan Kelurahan/Desa di seluruh Indonesia. 
+Data wilayah yang ada pada modul ini diambil dari **laravolt/indonesia** yang bersumber dari **edwardsamuel/Wilayah-Administratif-Indonesia**.
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -19,7 +19,7 @@ Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersum
 - [License](#license)
 
 ### Requirements
-* Laravel
+* [Laravel](https://laravel.com/docs/installation)
 * [Modules by nwidart](https://github.com/nwidart/laravel-modules)
 * [Modules Installer by joshbrw](https://github.com/joshbrw/laravel-module-installer)
 
@@ -28,7 +28,7 @@ Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersum
 ##### Install Package Via Composer
 
 ```bash
-	composer require novay/wilayah-module
+composer require novay/wilayah-module
 ```
 
 ### Usage
@@ -58,7 +58,7 @@ Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersum
 - `kota()->find($id)`
 - `kecamatan()->whereNama('Sungai Kunjang')->first()`
 - `kelurahan()->paginate(10)`
-- `logo($id) ` Untuk full url logo. *$id* adalah id provinsi atau kota..
+- `logo($id) ` Untuk full url logo. `$id` adalah id provinsi atau kota..
 
 
 ### Enable Logo
@@ -66,15 +66,15 @@ Data wilayah yang ada pada modul ini diambil dari laravolt/indonesia yang bersum
 * Daftarkan command berikut kedalam aplikasi Anda di `app/Console/Kernel.php`
 
 ```php
-	protected $commands = [
-	    \Modules\Wilayah\Console\LinkLogo::class
-	];
+protected $commands = [
+	\Modules\Wilayah\Console\LinkLogo::class
+];
 ```
 
 * Jalankan perintah artisan berikut melalui command prompt atau terminal:
 
 ```bash
-	php artisan wilayah:logo
+php artisan wilayah:logo
 ```
 
 ## License
