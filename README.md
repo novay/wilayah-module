@@ -68,6 +68,8 @@ composer require novay/wilayah-module
 * Daftarkan command berikut kedalam aplikasi Anda di `app/Console/Kernel.php`
 
 ```php
+// app/Console/Kernel.php
+
 protected $commands = [
 	\Modules\Wilayah\Console\LinkLogo::class
 ];
