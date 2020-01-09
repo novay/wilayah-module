@@ -39,6 +39,8 @@ composer require novay/wilayah-module
 ### Linked
 
 ```php
+// composer.json
+
 "autoload": {
 	"psr-4": {
             ...
