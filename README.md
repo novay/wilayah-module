@@ -13,6 +13,7 @@ Data wilayah yang ada pada modul ini diambil dari **laravolt/indonesia** yang be
 - [Installation](#installation)
     - [Install Package via Composer](#install-package-via-composer)
 - [Usage](#usage)
+- [Linked Helpers](#linked)
 - [Helpers](#helpers)
 - [Enable Logo](#enable-logo)
 - [License](#license)
@@ -37,6 +38,26 @@ composer require novay/wilayah-module
 
 * `php artisan module:migrate Wilayah`
 * `php artisan module:seed Wilayah`
+
+### Linked Helpers
+
+Gak tau kenapa helpers bawaan Modules gak fungsi, jadi mesti di register manual.
+
+```php
+// composer.json
+
+"autoload": {
+    "psr-4": {
+            ...
+        },
+        "classmap": [
+            ...
+        ], 
+        "files": [
+            "Modules/Wilayah/Helpers/helpers.php"
+    ]
+},
+```
 
 
 ### Helpers
