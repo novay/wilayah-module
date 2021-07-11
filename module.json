@@ -1,15 +1,20 @@
 {
     "name": "Wilayah",
     "alias": "wilayah",
-    "description": "",
+    "description": "Module Laravel yang berisi data Provinsi, Kabupaten/Kota, Kecamatan dan Kelurahan/Desa di seluruh Indonesia.",
     "keywords": [],
-    "order": 0,
+    "priority": 0,
     "providers": [
         "Modules\\Wilayah\\Providers\\WilayahServiceProvider"
     ],
-    "aliases": {},
+    "aliases": {
+        "Provinsi": "Modules\\Wilayah\\Entities\\Provinsi", 
+        "Kota": "Modules\\Wilayah\\Entities\\Kota", 
+        "Kecamatan": "Modules\\Wilayah\\Entities\\Kecamatan", 
+        "Kelurahan": "Modules\\Wilayah\\Entities\\Kelurahan"
+    },
     "files": [
-        "Helpers/helpers.php"
+        "Helpers/Function.php"
     ],
     "requires": []
 }

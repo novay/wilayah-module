@@ -1,25 +1,12 @@
 <?php
 
 return [
-    'name' => 'Wilayah', 
-    'version' => '1.0', 
+    'name' => 'Wilayah Module', 
+    'desc' => 'List Wilayah', 
+    'version' => '2.0', 
 
     'module' => [
-
-        'table_prefix' => 'wil_',
-
-        'route' => [
-	        'enabled' => false,
-	        'middleware' => ['web'],
-	        'prefix' => 'wilayah',
-	    ],
-
-	    'view' => [
-	        'layout' => 'ui::layouts.app',
-	    ],
-
-	    'menu' => [
-	        'enabled' => false,
-	    ],
-    ],
+        'table_prefix' => 'wil_', 
+        'delimiter' => ','
+    ]
 ];

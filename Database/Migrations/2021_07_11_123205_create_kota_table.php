@@ -1,16 +1,10 @@
 <?php
 
-/* 
- * Author : Noviyanto Rahmadi 
- * E-mail : me@novay.web.id
- * Copyright 2018 Borneo Teknomedia 
- */
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTabelWilKota extends Migration
+class CreateKotaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,8 +13,7 @@ class BuatTabelWilKota extends Migration
      */
     public function up()
     {
-        Schema::create(config('wilayah.module.table_prefix').'kota', function (Blueprint $table) 
-        {
+        Schema::create(config('wilayah.module.table_prefix').'kota', function (Blueprint $table) {
             $table->char('id', 4);
             $table->primary('id');
 

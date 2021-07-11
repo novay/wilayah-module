@@ -7,11 +7,11 @@ use Illuminate\Console\Command;
 class LinkLogo extends Command
 {
     /**
-     * The console command name.
+     * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'wilayah:logo';
+    protected $signature = 'wilayah:logo';
 
     /**
      * The console command description.

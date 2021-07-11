@@ -3,10 +3,19 @@
 namespace Modules\Wilayah\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
 
 class WilayahServiceProvider extends ServiceProvider
 {
+    /**
+     * @var string $moduleName
+     */
+    protected $moduleName = 'Wilayah';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = 'wilayah';
+
     /**
      * Boot the application events.
      *
@@ -14,11 +23,8 @@ class WilayahServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerTranslations();
         $this->registerConfig();
-        $this->registerViews();
-        $this->registerFactories();
-        $this->loadMigrationsFrom(module_path('Wilayah', 'Database/Migrations'));
+        $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
     }
 
     /**
@@ -28,7 +34,9 @@ class WilayahServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(RouteServiceProvider::class);
+        $this->commands([
+            \Modules\Wilayah\Console\LinkLogo::class
+        ]);
     }
 
     /**
@@ -39,59 +47,11 @@ class WilayahServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            module_path('Wilayah', 'Config/config.php') => config_path('wilayah.php'),
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            module_path('Wilayah', 'Config/config.php'), 'wilayah'
+            module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
         );
-    }
-
-    /**
-     * Register views.
-     *
-     * @return void
-     */
-    public function registerViews()
-    {
-        $viewPath = resource_path('views/modules/wilayah');
-
-        $sourcePath = module_path('Wilayah', 'Resources/views');
-
-        $this->publishes([
-            $sourcePath => $viewPath
-        ],'views');
-
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/wilayah';
-        }, \Config::get('view.paths')), [$sourcePath]), 'wilayah');
-    }
-
-    /**
-     * Register translations.
-     *
-     * @return void
-     */
-    public function registerTranslations()
-    {
-        $langPath = resource_path('lang/modules/wilayah');
-
-        if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'wilayah');
-        } else {
-            $this->loadTranslationsFrom(module_path('Wilayah', 'Resources/lang'), 'wilayah');
-        }
-    }
-
-    /**
-     * Register an additional directory of factories.
-     *
-     * @return void
-     */
-    public function registerFactories()
-    {
-        if (! app()->environment('production') && $this->app->runningInConsole()) {
-            app(Factory::class)->load(module_path('Wilayah', 'Database/factories'));
-        }
     }
 
     /**

@@ -13,15 +13,16 @@ Data wilayah yang ada pada modul ini diambil dari **laravolt/indonesia** yang be
 - [Installation](#installation)
     - [Install Package via Composer](#install-package-via-composer)
 - [Usage](#usage)
-- [Linked](#linked)
 - [Helpers](#helpers)
 - [Enable Logo](#enable-logo)
 - [License](#license)
+
 
 ### Requirements
 * [Laravel](https://laravel.com/docs/installation)
 * [Modules by nwidart](https://github.com/nwidart/laravel-modules)
 * [Modules Installer by joshbrw](https://github.com/joshbrw/laravel-module-installer)
+
 
 ### Installation
 
@@ -31,28 +32,12 @@ Data wilayah yang ada pada modul ini diambil dari **laravolt/indonesia** yang be
 composer require novay/wilayah-module
 ```
 
+
 ### Usage
 
 * `php artisan module:migrate Wilayah`
 * `php artisan module:seed Wilayah`
 
-### Linked
-
-```php
-// composer.json
-
-"autoload": {
-	"psr-4": {
-            ...
-        },
-        "classmap": [
-            ...
-        ], 
-        "files": [
-            "Modules/Wilayah/Helpers/helpers.php"
-	]
-},
-```
 
 ### Helpers
 
@@ -65,16 +50,6 @@ composer require novay/wilayah-module
 
 ### Enable Logo
 
-* Daftarkan command berikut kedalam aplikasi Anda di `app/Console/Kernel.php`
-
-```php
-// app/Console/Kernel.php
-
-protected $commands = [
-	\Modules\Wilayah\Console\LinkLogo::class
-];
-```
-
 * Jalankan perintah artisan berikut melalui command prompt atau terminal:
 
 ```bash
@@ -84,4 +59,4 @@ php artisan wilayah:logo
 ## License
 Wilayah Modules is licensed under the MIT license for both personal and commercial products. Enjoy!
 
-**Tested on Laravel 6+**
+**Last Tested on Laravel 8**

@@ -1,15 +1,8 @@
 <?php
 
-/* 
- * Author : Noviyanto Rahmadi 
- * E-mail : me@novay.web.id
- * Copyright 2018 Borneo Teknomedia 
- */
-
 namespace Modules\Wilayah\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
 
 use Modules\Wilayah\Entities\Kota;
@@ -28,12 +21,17 @@ class WilayahDatabaseSeeder extends Seeder
     {
         $this->reset();
 
-        $this->call(FillProvinsiTableSeeder::class);
-        $this->call(FillKotaTableSeeder::class);
-        $this->call(FillKecamatanTableSeeder::class);
-        $this->call(FillKelurahanTableSeeder::class);
+        $this->call(ProvinsiTableSeeder::class);
+        $this->call(KotaTableSeeder::class);
+        $this->call(KecamatanTableSeeder::class);
+        $this->call(KelurahanTableSeeder::class);
     }
 
+    /**
+     * Truncate all tables.
+     *
+     * @return void
+     */
     public function reset()
     {
         Schema::disableForeignKeyConstraints();
