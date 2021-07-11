@@ -50,7 +50,15 @@ composer require novay/wilayah-module
 
 ### Enable Logo
 
-* Jalankan perintah artisan berikut melalui command prompt atau terminal:
+Karena masalah waktu download package yang terlalu lama. Untuk versi terbaru tidak di includekan file logo. Tetapi dipanggil melalui CDN.
+
+Bila ingin menggunakan package sekaligus file Logonya bisa install package versi 2.0 :
+
+```bash
+composer require novay/wilayah-module "2.0"
+```
+
+* Lalu jalankan perintah artisan berikut melalui command prompt atau terminal:
 
 ```bash
 php artisan wilayah:logo
