@@ -34,9 +34,7 @@ class WilayahServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands([
-            \Modules\Wilayah\Console\LinkLogo::class
-        ]);
+        //
     }
 
     /**

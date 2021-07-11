@@ -26,19 +26,36 @@ if(!function_exists('kelurahan')) {
 
 if(!function_exists('logo')) {
     function logo($id) {
-        if(file_exists(public_path("logo/$id.png"))):
+        if(checkFile("https://cdn.btekno.id/assets/logo/$id.png")):
             $ext = '.png';
         endif;
-        if(file_exists(public_path("logo/$id.jpg"))):
+        if(checkFile("https://cdn.btekno.id/assets/logo/$id.jpg")):
             $ext = '.jpg';
         endif;
-        if(file_exists(public_path("logo/$id.jpeg"))):
+        if(checkFile("https://cdn.btekno.id/assets/logo/$id.jpeg")):
             $ext = '.jpeg';
         endif;
-        if(file_exists(public_path("logo/$id.gif"))):
+        if(checkFile("https://cdn.btekno.id/assets/logo/$id.gif")):
             $ext = '.gif';
         endif;
 
-        return asset('logo/' . $id . $ext);
+        return 'https://cdn.btekno.id/assets/logo/' . $id . $ext;
+    }
+}
+
+if(!function_exists('checkFile')) {
+    function checkFile($url)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,$url);
+
+        curl_setopt($ch, CURLOPT_NOBODY, 1);
+        curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return $result !== FALSE;
     }
 }
