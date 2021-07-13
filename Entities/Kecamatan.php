@@ -11,7 +11,7 @@ class Kecamatan extends Model
      *
      * @var string
      */
-    protected $table = 'kecamatan';
+    protected $table = 'wil_kecamatan';
 
     /**
      * The attributes that should be cast.

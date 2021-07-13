@@ -13,7 +13,7 @@ class CreateKotaTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('wilayah.module.table_prefix').'kota', function (Blueprint $table) {
+        Schema::create('wil_kota', function (Blueprint $table) {
             $table->char('id', 4);
             $table->primary('id');
 
@@ -23,7 +23,7 @@ class CreateKotaTable extends Migration
             $table->char('provinsi_id', 2);
             $table->foreign('provinsi_id')
                 ->references('id')
-                ->on(config('wilayah.module.table_prefix').'provinsi')
+                ->on('wil_provinsi')
                 ->onUpdate('cascade')->onDelete('restrict');
 
             $table->timestamps();
@@ -37,6 +37,6 @@ class CreateKotaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('wilayah.module.table_prefix').'kota');
+        Schema::dropIfExists('wil_kota');
     }
 }

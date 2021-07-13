@@ -13,7 +13,7 @@ class CreateKecamatanTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('wilayah.module.table_prefix').'kecamatan', function (Blueprint $table) {
+        Schema::create('wil_kecamatan', function (Blueprint $table) {
             $table->char('id', 7);
             $table->primary('id');
 
@@ -23,7 +23,7 @@ class CreateKecamatanTable extends Migration
             $table->char('kota_id', 4);
             $table->foreign('kota_id')
                 ->references('id')
-                ->on(config('wilayah.module.table_prefix').'kota')
+                ->on('wil_kota')
                 ->onUpdate('cascade')->onDelete('restrict');
 
             $table->timestamps();
@@ -37,6 +37,6 @@ class CreateKecamatanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('wilayah.module.table_prefix').'kecamatan');
+        Schema::dropIfExists('wil_kecamatan');
     }
 }

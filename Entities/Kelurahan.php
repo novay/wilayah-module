@@ -11,7 +11,7 @@ class Kelurahan extends Model
      *
      * @var string
      */
-    protected $table = 'kelurahan';
+    protected $table = 'wil_kelurahan';
 
     /**
      * The attributes that should be cast.

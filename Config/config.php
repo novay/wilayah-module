@@ -2,10 +2,6 @@
 
 return [
     'name' => 'Wilayah Module', 
-    'desc' => 'List Wilayah', 
-    'version' => '2.2', 
-
-    'module' => [
-        'table_prefix' => 'wil_'
-    ]
+    'desc' => 'List Wilayah (Provinsi, Kabupaten, Kecamatan & Kelurahan) di Indonesia', 
+    'version' => '2.3'
 ];

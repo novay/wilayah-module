@@ -11,7 +11,7 @@ class Provinsi extends Model
      *
      * @var string
      */
-    protected $table = 'provinsi';
+    protected $table = 'wil_provinsi';
 
     /**
      * The attributes that should be cast.

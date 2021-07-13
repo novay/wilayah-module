@@ -36,7 +36,7 @@ class KotaTableSeeder extends Seeder
 
         $collection = collect($data);
         foreach($collection->chunk(50) as $chunk):
-            DB::table(config('wilayah.module.table_prefix').'kota')->insert($chunk->toArray());
+            DB::table('wil_kota')->insert($chunk->toArray());
         endforeach;
     }
 }

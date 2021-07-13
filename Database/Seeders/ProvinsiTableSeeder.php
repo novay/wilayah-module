@@ -34,6 +34,6 @@ class ProvinsiTableSeeder extends Seeder
 
         }, $data);
 
-        DB::table(config('wilayah.module.table_prefix').'provinsi')->insert($data);
+        DB::table('wil_provinsi')->insert($data);
     }
 }

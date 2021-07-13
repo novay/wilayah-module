@@ -11,7 +11,7 @@ class Kota extends Model
      *
      * @var string
      */
-    protected $table = 'kota';
+    protected $table = 'wil_kota';
 
     /**
      * The attributes that should be cast.

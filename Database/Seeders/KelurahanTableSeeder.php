@@ -38,7 +38,7 @@ class KelurahanTableSeeder extends Seeder
             
             $collection = collect($data);
             foreach($collection->chunk(50) as $chunk):
-                DB::table(config('wilayah.module.table_prefix').'kelurahan')->insert($chunk->toArray());
+                DB::table('wil_kelurahan')->insert($chunk->toArray());
             endforeach;
         endforeach;
     }
