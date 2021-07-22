@@ -54,7 +54,7 @@ Gak tau kenapa helpers bawaan Modules gak fungsi, jadi mesti di register manual.
             ...
         ], 
         "files": [
-            "Modules/Wilayah/Helpers/helpers.php"
+            "Modules/Wilayah/Helpers/Function.php"
     ]
 },
 ```
